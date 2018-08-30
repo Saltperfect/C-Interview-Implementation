@@ -156,7 +156,7 @@ void sLinkList::remove_entry(int num){
   while((*indirect) -> data != num){
   	indirect = &(*indirect) -> next;
   }
-  *indirect = (*indirect) -> next;
+  *indirect = (*indirect) -> next; //inplace where indirect address is written write indirects's next address. voila!! link broken!!
 }
 
 void sLinkList::erase(int index){
